@@ -18,6 +18,8 @@
     "paths": {
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
+      "@firebase/*": ["firebase/*"],
+      "@mocks/*": ["mocks/*"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"]

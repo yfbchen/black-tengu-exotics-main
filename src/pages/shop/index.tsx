@@ -2,22 +2,16 @@ import Image from "next/image";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
+import { snakes } from "@mocks/snakes";
+
 import { Styled } from "@pages/shop/styled";
 
 const Shop = () => {
-  const mockResponse = [
-    {
-      id: 1,
-      name: "Metal",
-      image: "/images/Metal/1_Metal_card.jpg",
-    },
-  ];
-
   return (
     <div>
-      {/* <Styled.SlideContainer>
+      <Styled.SlideContainer>
         <Slide autoplay={false} duration={200}>
-          {mockResponse.map((snake) => {
+          {snakes.map((snake) => {
             return (
               <div key={snake.id}>
                 <Image
@@ -32,9 +26,9 @@ const Shop = () => {
             );
           })}
         </Slide>
-      </Styled.SlideContainer> */}
+      </Styled.SlideContainer>
 
-      {mockResponse.map((snake) => {
+      {snakes.map((snake) => {
         return (
           <Styled.Container key={snake.id}>
             <Image

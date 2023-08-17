@@ -25,21 +25,21 @@ const Navigation = () => {
           onLinkClick={onLinkClick}
           text={"Home"}
           url={`${ROUTES.home}`}
-          isSelected={selectedLink === ROUTES.home}
+          isselected={`${selectedLink === ROUTES.home}`}
         />
         <NavigationLink
           Icon={ShopSvg}
           onLinkClick={onLinkClick}
           text={"Shop"}
           url={`${ROUTES.shop}`}
-          isSelected={selectedLink === ROUTES.shop}
+          isselected={`${selectedLink === ROUTES.shop}`}
         />
         <NavigationLink
           Icon={CartSvg}
           onLinkClick={onLinkClick}
           text={"Cart"}
           url={`${ROUTES.cart}`}
-          isSelected={selectedLink === ROUTES.cart}
+          isselected={`${selectedLink === ROUTES.cart}`}
         />
       </Styled.MenuContainer>
     </Styled.Container>

@@ -4,10 +4,10 @@ import styled from "styled-components";
 import { COLORS } from "@constants/colors";
 
 export interface MenuLinkProps {
-  isSelected: boolean;
+  isselected: string;
 }
 
-const MenuLink = styled.div<MenuLinkProps>`
+const MenuLink = styled(Link)<MenuLinkProps>`
   align-items: center;
   border-radius: 20px;
   color: ${COLORS.menuText};
@@ -19,7 +19,7 @@ const MenuLink = styled.div<MenuLinkProps>`
   width: 100px;
 
   background-color: ${(props) =>
-    props.isSelected ? `${COLORS.menuBackground}` : "none"};
+    props.isselected === "true" ? `${COLORS.menuBackground}` : "none"};
 
   &:hover {
     background-color: ${COLORS.menuBackground};

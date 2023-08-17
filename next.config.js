@@ -10,6 +10,11 @@ const nextConfig = {
 
     return config;
   },
+  compiler: {
+    styledComponents: {
+      displayName: true,
+    }
+  }
 };
 
 module.exports = nextConfig;
