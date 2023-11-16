@@ -1,6 +1,4 @@
-import Image from "next/image";
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
+import Card from "@components/Card";
 
 import { snakes } from "@mocks/snakes";
 
@@ -8,38 +6,19 @@ import { Styled } from "@pages/shop/styled";
 
 const Shop = () => {
   return (
-    <div>
-      <Styled.SlideContainer>
-        <Slide autoplay={false} duration={200}>
-          {snakes.map((snake) => {
-            return (
-              <div key={snake.id}>
-                <Image
-                  src={snake.image}
-                  alt={`image for ${snake.name}`}
-                  width={500}
-                  height={400}
-                  placeholder="blur"
-                  blurDataURL={snake.image}
-                />
-              </div>
-            );
-          })}
-        </Slide>
-      </Styled.SlideContainer>
-
+    <Styled.Container>
       {snakes.map((snake) => {
         return (
-          <Styled.Container key={snake.id}>
-            <Image
-              src={snake.image}
-              alt={`image for ${snake.name}`}
-              fill={true}
-            />
-          </Styled.Container>
+          <Card
+            key={snake.id}
+            description="test description"
+            imageName={snake.name}
+            imageUrl={snake.image}
+            title={snake.name}
+          />
         );
       })}
-    </div>
+    </Styled.Container>
   );
 };
 

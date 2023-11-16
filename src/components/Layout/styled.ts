@@ -3,6 +3,7 @@ import styled from "styled-components";
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
+  font-size: 16px;
   height: 100vh;
 `;
 
@@ -13,8 +14,8 @@ const BodyContainer = styled.div`
   height: 100%;
   margin: auto;
   overflow-y: scroll;
-  padding-top: 3rem;
-  width: 75%;
+  padding-top: 32px;
+  width: 90%;
 
   // Hide Scrollbar for Chrome, Safari, Opera
   ::-webkit-scrollbar {
