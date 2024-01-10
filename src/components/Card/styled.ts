@@ -1,19 +1,21 @@
 import styled from "styled-components";
 
 const Overlay = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  height: 75px;
+
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(66, 66, 66, 0.525);
-  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.5s ease;
 
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
+  color: white;
+  font-size: 1.5rem;
 `;
 
 const Container = styled.div`
@@ -55,8 +57,9 @@ const ImgContainer = styled.div`
     }
 
     ${Overlay} {
-      transform: scale(0);
-      -webkit-transform: scale(0);
+      /* transform: scale(0);
+      -webkit-transform: scale(0); */
+      opacity: 0;
     }
   }
 `;

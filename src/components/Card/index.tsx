@@ -23,9 +23,7 @@ const Card: FunctionComponent<CardProps> = ({
       <Styled.ImgContainer>
         <Image src={imageUrl} alt={`image for ${imageName}`} fill />
 
-        <Styled.Overlay>
-          <p>{title}</p>
-        </Styled.Overlay>
+        <Styled.Overlay>{title}</Styled.Overlay>
       </Styled.ImgContainer>
     </Styled.Container>
   );
